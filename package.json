@@ -1,0 +1,10 @@
+{
+  "name": "interactive-college-placement-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single-command launcher for Interactive College Placement & Skills Analytics Dashboard",
+  "scripts": {
+    "start": "python run.py"
+  }
+}
+
