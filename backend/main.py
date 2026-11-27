@@ -891,7 +891,7 @@ if os.path.isdir(FRONTEND_DIST):
     if os.path.isdir(assets_dir):
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
 
-    @app.get("/{full_path:path}")
+    @app.api_route("/{full_path:path}", methods=["GET", "HEAD"])
     def serve_spa(full_path: str):
         candidate = os.path.join(FRONTEND_DIST, full_path)
         if full_path and os.path.isfile(candidate):

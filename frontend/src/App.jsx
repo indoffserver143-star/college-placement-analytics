@@ -8,7 +8,12 @@ import AdminPortal from './components/AdminPortal';
 import { useRealtimeUpdates } from './hooks/useRealtimeUpdates';
 
 export default function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    role: 'admin',
+    name: 'Placement Officer (Admin)',
+    username: 'admin',
+    access_token: 'demo-token-admin',
+  });
   const [activeTab, setActiveTab] = useState('dashboard');
   const [liveTick, setLiveTick] = useState(0);
   const [toastMsg, setToastMsg] = useState('');
